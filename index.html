@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/StateType.js"></script>
+    <script src="js/StateTypeEnum.js"></script>
+    <script src="js/State.js"></script>
+    <script src="js/Training.js"></script>
+    <script src="js/StateController.js"></script>
+  </head>
+
+  <body>
+    <div id ='states'>
+      <h3>Capitais de Países e Estados</h3>
+      <div>
+        <button type="button" id="btTrain" onclick="startTraining()">Treinar</button>
+      </div>
+    </div>
+
+    <div id ='statePane' style="display: none;">
+      <div>Tempo para resposta: <span id="seconds"></span> segundos</div>
+
+      <p style="font-size: 50px;">
+        <span id="state"></span> <br>
+        <input type="button" id="btCheckAnswer1" onclick="checkAnswer(event)">
+        <input type="button" id="btCheckAnswer2" onclick="checkAnswer(event)">
+        <input type="button" id="btCheckAnswer3" onclick="checkAnswer(event)">
+        <input type="button" id="btCheckAnswer4" onclick="checkAnswer(event)">
+      </p>
+    </div>
+
+    <div id="result" style="display: none;">
+      <h3>Resultado</h3>
+      <p>Certas: <span id="correctTotal">0</span></p> 
+      <p>Erradas: <span id="wrongTotal">0</span></p>
+      <p>Total: <span id="total">0</span></p>
+      <p>Tempo Médio por Resposta: <span id="avarageTime">0</span> segundos. </p>
+      <p>Pontuação: <span id="score">0</span></p>
+      <p id='wrongPanel' style='font-size: 20px;border-style: solid;'>Erradas</p>
+      <p id='correctPanel' style='font-size: 20px;border-style: solid;'>Certas</p>
+    </div>
+  </body>
+</html>
